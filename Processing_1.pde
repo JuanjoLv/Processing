@@ -10,7 +10,7 @@ float altopala=20;
 float xpala =0;
 float palax =0;
 int nivel=0;
-
+int puntuacion=0;
 
 void setup() {
   size(600, 600);
@@ -62,6 +62,8 @@ void nivel2() {
   text("No", 325, height/1.75);
   text("Pulsa y", 215, height/1.5);
   text("Pulsa n", 315, height/1.5);
+  text("Puntuación:", 250, height/1.3);
+  text(puntuacion, 285, height/1.25);
 }
 
 //Para la pantalla de juego
@@ -91,5 +93,6 @@ void nivel1() {
 
   if (posy==500 && posx>(xpala) && posx<palax) {
     vy=vy*-1;
+    puntuacion=puntuacion+1;
     }
 }
