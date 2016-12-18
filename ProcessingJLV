@@ -1,4 +1,4 @@
-
+//Se declaran las variables
 float posx=width/2;
 float vx=3;
 float posy=height/2;
@@ -24,7 +24,7 @@ void keyPressed() {
   if (key=='y') nivel=1;
 }
 
-
+//Para la pantalla de presentación del juegp
 void presentacion() {
 
   background(0);
@@ -54,6 +54,7 @@ void draw() {
   }
 }
 
+//Al perder el juego
 void nivel2() {
   background(0);
   text("Perdiste ¿Reintentar?", 200, height/2.25);
@@ -63,6 +64,7 @@ void nivel2() {
   text("Pulsa n", 315, height/1.5);
 }
 
+//Para la pantalla de juego
 void nivel1() {
 
   background(0);
@@ -74,6 +76,7 @@ void nivel1() {
   rect(xpala, alturapala, anchopala, altopala);
   ellipse(posx, posy, radiobola, radiobola);
 
+  //Rebote de la bola
   if (posy<20) {
     vy=vy*-1;
   }
