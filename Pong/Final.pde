@@ -13,7 +13,7 @@ int altopala=10;
 float Xpala;
 float palaX;
 //Variable para la imagen de fondo
-PImage img;
+PImage webImg;
 //Variables generales
 int nivel=0;
 int puntuacion=0;
@@ -26,12 +26,13 @@ Bloque[] miBloque3 = new Bloque[5];
 
 void setup() {
   size(600, 600);
-  img=loadImage("fondo.jpg");
+  String url="http://www.sopitas.com/wp-content/uploads/2016/04/gal2-e1460900213444.jpg";
+  webImg=loadImage(url,"png");
   frameRate(50);
 }
 
 void draw() {
-  image(img, 0, 0);
+  image(webImg, 0, 0);
   cambiodenivel(); //Función para cambiar de nivel
 }
 
@@ -194,7 +195,7 @@ void creacionBloque() {
 //Pantalla después de perder
 void Perder() {
   bolaposy=50;
-  image(img, 0, 0);
+  image(webImg, 0, 0);
   fill(128, 0, 255);
   textAlign(CENTER);
   text("Perdiste ¿Reintentar?", width/2, 100);  
@@ -210,7 +211,7 @@ void Perder() {
 //Pantalla después de ganar
 void Ganar() {
   bolaposy=50;
-  image(img, 0, 0);
+  image(webImg, 0, 0);
   fill(128, 0, 255);
   textAlign(CENTER);
   text("¡Ganaste!", width/2, 100);  
